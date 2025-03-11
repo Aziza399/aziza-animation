@@ -1,0 +1,140 @@
+    body {
+        background-color: rgb(158, 221, 234);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        perspective: 1000px;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(253, 2, 220);
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: fly 5s linear infinite, resizeBox 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes fly {
+        0% {
+            top: 0;
+            left: 0;
+            transform: rotate(0deg);
+        }
+
+        25% {
+            top: 0;
+            left: 85%;
+            transform: rotate(90deg);
+        }
+
+        50% {
+            top: 75%;
+            left: 85%;
+            transform: rotate(180deg);
+        }
+
+        75% {
+            top: 75%;
+            left: 0;
+            transform: rotate(270deg);
+        }
+
+        100% {
+            top: 0;
+            left: 0;
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes resizeBox {
+        0% {
+            width: 100px;
+            height: 100px;
+        }
+
+        50% {
+            width: 150px;
+            height: 150px;
+        }
+
+        100% {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .AZIZA {
+        display: flex;
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        gap: 10px;
+        transform-style: preserve-3d;
+        animation: rotateAll 5s linear infinite 6s;
+    }
+
+    .AHARIFI {
+        animation: rotateLetter 1s linear 0s 1 forwards, colorChange 2s infinite;
+    }
+
+    .ZHARIFI {
+        animation: rotateLetter 1s linear 1s 1 forwards, colorChange 2s infinite;
+    }
+
+    .IHARIFI {
+        animation: rotateLetter 1s linear 2s 1 forwards, colorChange 2s infinite;
+    }
+
+    .ZHARIFINI {
+        animation: rotateLetter 1s linear 3s 1 forwards, colorChange 2s infinite;
+    }
+
+    .AHARIFINI {
+        animation: rotateLetter 1s linear 4s 1 forwards, colorChange 2s infinite;
+    }
+
+    @keyframes rotateAll {
+        0% {
+            transform: rotateX(0deg);
+        }
+
+        100% {
+            transform: rotateX(360deg);
+        }
+    }
+
+    @keyframes rotateLetter {
+        0% {
+            transform: rotateX(0deg);
+        }
+
+        100% {
+            transform: rotateX(360deg);
+        }
+    }
+
+    @keyframes colorChange {
+        0% {
+            color: red;
+        }
+
+        25% {
+            color: blue;
+        }
+
+        50% {
+            color: green;
+        }
+
+        75% {
+            color: purple;
+        }
+
+        100% {
+            color: orange;
+        }
+    }
